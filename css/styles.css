@@ -1,0 +1,279 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  h1{
+    color: #ffffff;
+    padding: 30px ;
+    text-align: center;
+  }
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  /* background-color: #fefefe; */
+  margin: auto;
+  padding: 20px;
+  /* border: 1px solid #888; */
+  width: 70%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -70px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080710;
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
+form{
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 30px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.regiterbtnn{
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.modalBtn{
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 110px;
+    width: 10%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+h3{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+}
+#ulContainer{
+    color: #000000;
+    padding: 10px 50px;
+    /* text-align: center; */
+    /* padding: 10px; */
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    
+    
+}
+
+#ulContainer li{
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #e5e5e5;
+    width: 50%;
+    min-width: 300px;
+    cursor: pointer;
+}
+
+.title{
+    padding-top: 30px;
+    font-size: 25px;
+}
+
+.reqbtndiv{
+    text-align: center;
+}
+.reqb {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.loqb{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.reqb:hover{
+    color: rgb(4, 0, 255);
+    text-decoration: underline;
+   }
+
+   .grid-container {
+    display: flex;
+    flex-direction: row;
+    
+    width: 100%;
+  }
+  
+  .grid-container > 
+  *{
+    flex: 1 1  80px;
+  }
+  .logout{
+    margin: 0 5px;
+    width: 90px;
+    height: 50px;
+    padding: 13px 20px 20px 14px;
+    text-align: center;
+  }
+  .nav{
+    list-style: none;
+    float: right;
+  }
+  .nav li{
+    display: inline;
+  }
+  #loggedinName{
+    color: rgb(255, 255, 255);
+  }
+.unsub{
+    margin: 20px;
+    width: 40%;
+    
+}
+.lstbtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#updateBtn{
+    width: 45%;
+    background-color: green;
+    color: white;
+
+}
+#deleteBtn{
+    width: 45%;
+    background-color: rgb(168, 0, 0);
+    color: rgb(255, 255, 255);
+}
