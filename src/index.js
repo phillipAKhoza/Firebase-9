@@ -53,7 +53,7 @@ const unsubBooks = onSnapshot(bookQuery, (books)=>{
     });
     // console.log(allBooks);
     var ul = document.querySelector('#ulContainer');
-    ul.innerHTML = "";;
+    ul.innerHTML = "";
     for ( let i = 0; i <= allBooks.length - 1; i++) {
         // create li element.
         var li = document.createElement('li'); 
