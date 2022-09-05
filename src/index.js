@@ -203,11 +203,13 @@ const unsubAuth =onAuthStateChanged(auth, (user)=>{
     if (user == null) {
         loginModal.style.display = "block"; 
         document.querySelector('#loggedinName').innerText ="";
+        document.querySelector('#logoutbtn').innerText ="LogIn";
 
     }else{
         loginModal.style.display = "none";  
         registerModal.style.display = "none";
         document.querySelector('#loggedinName').innerText =" Welcome: "+user.email;
+        document.querySelector('#logoutbtn').innerText ="LogOut";
     }
 
 });

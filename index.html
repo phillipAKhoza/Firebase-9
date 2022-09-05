@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div id="loginModal" class="modal" >
+        <!-- Modal content -->
+        <div class="modal-content">
+          <form class="login" style="z-index: 5;background-color:lightslategrey;width: 80%;height: 90%;">
+            <h3>Login</h3>
+            <label for="email">Email:</label>
+            <input id="email" type="text" name="email" required><br>
+            <label for="password-login">PassWord</label>
+            <input id="password-login" type="password" name="password" required>
+            <br>
+            <button type="submit" class="regiterbtnn">Login</button>
+            <div class="reqbtndiv">
+                <a class="reqb" id="reqbtn" >Dont Have an Account? Register</a>
+            </div>
+            </form>
+        </div>
+      </div>
+      <div id="registerModal" class="modal" >
+        <!-- Modal content -->
+        <div class="modal-content">
+          
+          <form class="register" style="z-index: 5;background-color:lightslategrey;width: 80%;padding: 5px 30px;height: 90%;">
+            <h3>Register</h3>
+            <label for="email">Email</label>
+            <input type="text" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="email must be in the following order: characters@characters.domain"><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" onkeyup="check()" name="password" required pattern=".{8,}" title="Eight or more characters">
+            <label for="confirm_password">Password</label>
+            <input type="password" id="confirm_password" onkeyup="check()" name="confirm_password" required pattern=".{8,}" title="Eight or more characters"><br>
+            <span id='message' ></span>
+            <br>
+            <button type="submit" class="regiterbtnn">Register</button>
+            <div class="reqbtndiv">
+                <a class="loqb" id="loqinbtn" >Registered? login</a>
+            </div>
+            </form>
+        </div>
+      </div>
+    
+    <div class="grid-container">
+        <div class="item1"><h3>HTML5,CSS3&JavaScript + Firebase 9</h3></div>
+        <div class="item2">
+            <ul class="nav">
+            <li id="loggedinName"></li>
+            <li><button class="logout" id="logoutbtn">LogIn</button></li>
+        </ul></div>
+        
+    </div>
+<main>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn" class="modalBtn">Add Book</button>
+
+<!-- The Add Book Modal -->
+<div id="addModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form class="add">
+        <h3>Add Book</h3>
+        <label for="title">Title</label>
+        <input id="title" type="text" name="title" required><br>
+        <label for="author">Author</label>
+        <input id="author" type="text" name="author" required><br>
+
+        <button type="submit">Add new Book</button>
+    </form>
+  </div>
+
+</div>
+
+
+<div id="updateModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" id="close1">&times;</span>
+      <form class="update">
+        <h3>Update/Delete Book</h3>
+        <label for="title-update">Title</label>
+        <input id="title-update" type="text" name="title" ><br>
+        <label for="author-update">Author</label>
+        <input id="author-update" type="text" name="author" required><br>
+        <div class="updateCont">
+            <button type="submit" id="updateBtn" value="update">Update Book</button>
+            <button type="submit" id="deleteBtn" value="delete">Delete Book</button>
+        </div>
+    </form>
+    </div>
+  
+</div>
+
+
+<div id="deleteModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" id="close2">&times;</span>
+      <form class="delete">
+        <h3>Delete Book</h3>
+        <label for="id">Document id</label>
+        <input id="id" type="text" name="id" required><br>
+
+        <button type="submit">Delete Book</button>
+    </form>
+    </div>
+  
+</div>
+</main>
+<h3 class="title">
+    Book Collection
+</h3>
+    <ul id="ulContainer">
+        
+    </ul>
+<h3>Unsubscribe from db and Auth</h3>
+<div class="lstbtn">
+    <button class="unsub">Unsubscribe</button>
+</div>
+<script src="./src/modals.js"></script>
+
+<script src="./dist/bundle.js"></script>
+</body>
+</html>
